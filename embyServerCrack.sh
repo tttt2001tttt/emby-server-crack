@@ -2,6 +2,7 @@
 
 VER=1.0
 USERNAME="qcgzxw"
+PROJECT="https://github.com/qcgzxw/emby-server-crack"
 PROJECT_NAME="emby-server-crack"
 BRANCH="main"
 GITHUB_CDN="https://cdn.jsdelivr.net/gh"
@@ -35,6 +36,7 @@ __red() {
 }
 error() {
   __red "$1\n"
+  __red "This might be a bug of $PROJECT_NAME , please report issue: $PROJECT\n"
   exit
 }
 success() {
@@ -96,6 +98,8 @@ downloadCrackFile() {
 crack() {
   clear
   checkEmby
+  success "Loading..."
+  clear
   getCrackConfig
   success "Emby info:"
   success "    platform: ${emby_platform}"
